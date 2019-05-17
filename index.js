@@ -27,7 +27,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         let new(PARAMETER) = sent(PARAMETER);
         (PARAMETER) = new(PARAMETER);
         
-        agent.add(`Viewing ` + new(PARAMETER) + ' on Liquid Galaxy');
+        agent.add(`Sent ` + new(PARAMETER));
       }
       return (PARAMETER);
     }, function(error, isSuccess) {
