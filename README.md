@@ -56,11 +56,12 @@ Create a DialogFlow Agent which accepts end-user's queries. It extracts keywords
 3. Enable the **Inline Editor**, by clicking the Enabled button.
 4. Make sure you are under **index.js**.
 5. **Delete** all the code currently in the Inline Editor, and replace it with **[this](https://github.com/MyWorldRules/LGxVoiceControl/blob/master/index.js).**
-6. In the code, replace *DATABASEURL* with your database URL. When you copy your Database URL, remove the HTTPS://. It should look something like this: `ws://NAME.firebaseio.com/`.
-7. In the code, replace *BROADNAME* with the broad name from your database. Mine looks like this: `return admin.database().ref('motorState').transaction((location) => {`.
+6. In the code, replace *FIREBASEURL* with your database URL. When you copy your Database URL, remove the HTTPS://. It should look something like this: `ws://NAME.firebaseio.com/`.
+7. In the code, replace *NAME* with the broad name from your database. Mine looks like this: `return admin.database().ref('motorState').transaction((location) => {`.
 8. In the code, replace *NAMEOFINTENT* to what your intent name is. Mine looks like this: `intentMap.set('AskLocation', handleLocation);`
+9. In the code, replace every occurence of *(PARAMETER)* to the name of your (PARAMETER). Mine was *Motor*
 9. Click on **DEPLOY**.
-10. After it deployes, you can test it out. On the **Try it now** field, type in a greeting (like hi, hello etc). It will respond `Hi! What do you want to see?`, now type in a country name. It will finally respond `Thank You... Viewing (name of your country) on Liquid Galaxy`!
+10. After it deployes, you can test it out. On the **Try it now** field, type in a greeting (like hi, hello etc). It will respond `Hi! Tell me when you want to turn on the motor.` (Or whatever you set it to before). Then say something containing your keyword. It will respond.
 
 ### Linux Installation
 Use the termial for the installation
@@ -68,7 +69,7 @@ Use the termial for the installation
 1. Install all updates <br/>
 `sudo apt-get update`<br/>
 `sudo apt-get upgrade`
-2. Install curl: <br/>
+2. Install curl: <br/>  
 `sudo apt-get install curl`
 3. Install node.js: <br/>
 `curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -` <br/>
