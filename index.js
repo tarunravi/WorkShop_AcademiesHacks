@@ -36,7 +36,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
  }
 
   let intentMap = new Map();
-  intentMap.set('activate(PARAMETER)', handle(PARAMETER));
+  intentMap.set('NAMEOFINTENT', handle(PARAMETER));
   
  
   agent.handleRequest(intentMap);
